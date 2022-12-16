@@ -1,1 +1,26 @@
-<p>ly-my-form works!</p>
+<h2>My Form</h2>
+<form class="form" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>姓</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>名</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>住所</mat-label>
+    <mat-select>
+      <mat-option>a</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>お気に入り</mat-label>
+    <mat-select multiple>
+      <mat-select-trigger>
+        <span> </span>
+      </mat-select-trigger>
+      <mat-option></mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
