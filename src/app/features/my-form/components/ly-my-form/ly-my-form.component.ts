@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
-interface User {
-  firstName: string;
-  lastName: string;
-  address: {
-    prefectureId: string;
+interface CustomForm {
+  inputForm: string;
+  selectForm: {
+    selectedFormId: string;
   };
-  favaritCategoryIds: string[];
+  selectFormMultiIds: string[];
 }
 
 @Component({
@@ -17,11 +16,12 @@ interface User {
 })
 export class LyMyFormComponent {
   form = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    address: new FormGroup({
-      prefectureId: new FormControl(''),
+    inputForm: new FormControl(''),
+    selectForm: new FormGroup({
+      selectedFormId: new FormControl(''),
     }),
-    favaritCategoryIds: new FormArray([]),
+    selectFormMultiIds: new FormArray([]),
   });
+
+  // TODO: フォームのセレクトボックスに色々設定する
 }
